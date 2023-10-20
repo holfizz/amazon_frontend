@@ -1,0 +1,23 @@
+.sortDropDown {
+	width: 100px;
+	height: 40px;
+  cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 20px;
+	position: relative;
+	margin-left: auto;
+	select {
+		color: #fff;
+      cursor: pointer;
+	}
+}
+.light {
+	background: var(--primary);
+	border-radius: 5px;
+}
+.dark {
+	background: var(--dark-blue);
+	border: 2px solid var(--grey);
+}

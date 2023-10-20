@@ -1,0 +1,16 @@
+.field {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	label {
+		width: 100%;
+	}
+}
+.spanField {
+	margin: 20px 0;
+}
+.error {
+	color: #b91515;
+	width: max-content;
+}

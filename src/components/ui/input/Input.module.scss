@@ -1,0 +1,20 @@
+.Input {
+	width: 100%;
+	padding: 0 30px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--baseBorder);
+}
+
+.Dark {
+	color: #fff;
+	background: var(--dark-blue);
+	border: 2px solid var(--grey);
+}
+.Light {
+	color: var(--black);
+	background: #fff;
+	border: 2px solid var(--light-grey);
+}

@@ -1,0 +1,70 @@
+.Button {
+	width: 100%;
+	padding: 0 30px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--baseBorder);
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	transition: all 0.3s;
+	* {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+.Button:hover {
+	transition: all 0.3s;
+	box-shadow: rgba(68, 69, 70, 0.29) 0px 8px 24px;
+}
+
+.Dark {
+	color: var(--primary);
+	background: var(--secondary);
+}
+.Light {
+	color: #fff;
+	background: var(--primary);
+}
+.White {
+	color: var(--primary);
+	background: #fff;
+}
+.squareButton {
+	height: 2.5rem;
+	width: 2.5rem;
+	background-color: var(--primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 200ms;
+	transition-duration: 200ms;
+	position: relative;
+	border-radius: 0.25rem;
+}
+.squareButtonNumber {
+	display: flex;
+	height: 1rem;
+	width: 1rem;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	background: #fff;
+	padding: 0.125rem;
+	font-size: 0.75rem;
+	color: var(--secondary);
+	position: absolute;
+	top: -0.25rem;
+	right: -0.25rem;
+}
+.iconSquereButton {
+	color: var(--secondary);
+	font-size: 20px;
+}
+.SquareButtonBlock {
+	width: 50px;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

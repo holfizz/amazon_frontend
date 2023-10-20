@@ -1,0 +1,19 @@
+.catalog{
+  display: flex;
+  flex-wrap: wrap;
+}
+.BlockLoadMoreButton{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+#LoadMoreButton{
+  width: 30px ;
+  padding: 20px;
+  margin: 30px 10px;
+}
+.sectionCatalog{
+  padding: 0 50px;
+}

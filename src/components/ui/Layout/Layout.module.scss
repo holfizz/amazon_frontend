@@ -1,0 +1,11 @@
+.Layout{
+  height: 100vh;
+  width: 100vw;
+}
+.sidebar{
+  display: grid;
+  grid-template-columns: 0.8fr 4fr;
+}
+.main{
+  padding: 12px;
+}

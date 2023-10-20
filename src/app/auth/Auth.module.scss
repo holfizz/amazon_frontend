@@ -1,0 +1,65 @@
+.Auth {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.contentBlock {
+	width: 40vw;
+	height: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #fff;
+	border-radius: 30px;
+	border-radius: 15px;
+	overflow: hidden;
+}
+.form {
+	flex-direction: column;
+	width: auto;
+	height: 100%;
+	padding: 30px;
+	width: 50%;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.formOriginal {
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+.changeFormBlock {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.changeFormBlockButton{
+	margin-top: 20px;
+	width: 80%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.amazonTitle{
+	color: rgba(45, 45, 45, 0.78);
+}
+.blockAmazonTitle{
+
+	width:80% ;
+	color: var(--light-grey);
+	font-weight: 200;
+}
+.alreadyHaveAccountTitle{
+	font-weight: 100;
+	text-decoration: underline;
+	cursor: pointer;
+}
