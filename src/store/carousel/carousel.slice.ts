@@ -1,11 +1,10 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 import { ICarouselInitialState } from './carousel.types'
 
 const initialState: ICarouselInitialState = {
-	selectedItemIndex: 0
+	selectedItemIndex: 0,
 }
-
 export const carouselSlice = createSlice({
 	name: 'carousel',
 	initialState,
@@ -20,6 +19,6 @@ export const carouselSlice = createSlice({
 		},
 		selectSlide: (state, action: PayloadAction<number>) => {
 			state.selectedItemIndex = action.payload
-		}
-	}
+		},
+	},
 })

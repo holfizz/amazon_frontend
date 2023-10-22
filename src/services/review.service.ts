@@ -4,7 +4,7 @@ import { pathApiConstants } from '@/constants/api.constants'
 
 export const ReviewService = {
 	async getAll() {
-		return axiosClassic<IReview[]>({
+		return instance<IReview[]>({
 			url: pathApiConstants.REVIEWS,
 			method: 'GET',
 		})

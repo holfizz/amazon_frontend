@@ -49,3 +49,6 @@ export enum EnumProductSort {
 	HIGH_PRICE = 'high_price',
 	LOW_PRICE = 'low_price',
 }
+export interface TypeParamFilters {
+	searchTerm: ProductDataFilters
+}

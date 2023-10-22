@@ -1,35 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap');
-:root{
-    --black: #2E3239;
-    --light-grey: rgba(171, 169, 169, 0.91);
-    --grey: #3e4852;
-    --white: #fff;
-    --primary: #ff8902;
-    --yellow: #f9c00d;
-    --secondary: #151d25;
-    --aqua: #268697;
-    --baseBorder:11px;
-    --dark-blue:#222f3e;
+:root {
+	--black: #2e3239;
+	--light-grey: rgba(171, 169, 169, 0.91);
+	--grey: #3e4852;
+	--white: #fff;
+	--primary: #ff8902;
+	--yellow: #f9c00d;
+	--secondary: #151d25;
+	--aqua: #268697;
+	--baseBorder: 11px;
+	--dark-blue: #222f3e;
 }
-body, html{
-    font-family: 'Open Sans', sans-serif;
-    background: #f2f2f2;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    overflow-x:hidden ;
+body,
+html {
+	font-family: --font-open_sans, sans-serif;
+	background: #f2f2f2;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	overflow-x: hidden;
 }
-*{
-    outline: none;
-    border: none;
-    box-shadow: none;
-    background: transparent;
+* {
+	outline: none;
+	border: none;
+	box-shadow: none;
+	background: transparent;
 
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
-button{
-    cursor: pointer;
+button {
+	cursor: pointer;
 }
-input{
-    cursor: text;
+input {
+	cursor: text;
 }

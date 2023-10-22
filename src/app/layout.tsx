@@ -11,8 +11,10 @@ import cls from './Layout/Layout.module.scss'
 import { Open_Sans } from 'next/font/google'
 
 const font = Open_Sans({
-	subsets: ['latin'],
+	subsets: ['latin', 'cyrillic-ext'],
 	weight: ['300', '400', '500', '600'],
+	style: ['normal'],
+	variable: '--font-open_sans',
 })
 
 export const metadata: Metadata = {
