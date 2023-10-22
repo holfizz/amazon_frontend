@@ -29,6 +29,7 @@ const CatalogPagination: FC<ICatalogPagination> = ({ data, title }) => {
 				page,
 				perPage: 4,
 				sort: sortType,
+				ratings: '',
 			}),
 		{
 			initialData: data,

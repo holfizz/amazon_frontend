@@ -2,24 +2,18 @@ import React, { FC } from 'react'
 import { IProduct } from '@/interfaces/product.interface'
 import Image from 'next/image'
 import ProductRating from '@/ui/catalog/product-item/product-rating/ProductRating'
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { convertPrice } from '@/utlis/convertPrice'
 import cls from './ProductItem.module.scss'
 import AddToCartButton from '@/ui/catalog/product-item/add-to-cart-button/AddToCartButton'
+import FavoriteButton from '@/ui/catalog/product-item/favorite-button/FavoriteButton'
 
-const DynamicFavoriteButton = dynamic(
-	() => import('./favorite-button/FavoriteButton'),
-	{
-		ssr: false,
-	},
-)
 const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 	return (
 		<div className={cls.productCart}>
 			<div className={cls.productCartImageBlock}>
 				<div className={cls.productCartButtonBlock}>
-					<DynamicFavoriteButton productId={product.id} />
+					<FavoriteButton productId={product.id} />
 					<AddToCartButton product={product} />
 				</div>
 
@@ -40,7 +34,7 @@ const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 				>
 					{product.category.name}
 				</Link>
-				<ProductRating product={product} />
+				<ProductRating product={product} isText />
 				<div className={cls.productPrice}>{convertPrice(product.price)}</div>
 			</div>
 		</div>

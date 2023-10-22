@@ -1,3 +1,4 @@
+'use client'
 import React, { FC, useState } from 'react'
 import Input from '@/ui/input/Input'
 import cls from './Search.module.scss'
@@ -10,19 +11,16 @@ const Search: FC = () => {
 	const [sortType, setSortType] = useState<EnumProductSort>(
 		EnumProductSort.NEWEST,
 	)
-	const [query, setQuery] = useState<string>('')
-	const router = useRouter()
+	const [searchTerm, setSearchTerm] = useState<string>('')
+	const { push } = useRouter()
 
 	const search = () => {
-		router.push({
-			pathname: '/q',
-			query: { term: query },
-		})
+		push(`/explorer?searchTerm=${searchTerm}`)
 	}
 	return (
 		<div className={cls.search}>
 			<Input
-				onChange={e => setQuery(e.target.value)}
+				onChange={e => setSearchTerm(e.target.value)}
 				id={cls.input}
 				variant={'dark'}
 			></Input>

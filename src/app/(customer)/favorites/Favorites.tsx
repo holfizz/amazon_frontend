@@ -2,7 +2,6 @@
 
 import Heading from '@/ui/heading/Heading'
 import Catalog from '@/ui/catalog/Catalog'
-import Layout from '@/ui/Layout/Layout'
 import { useAuth } from '@/hooks/useAuth'
 import { useProfile } from '@/hooks/useProfile'
 
@@ -12,7 +11,7 @@ export default function Favorites({}: IFavorites) {
 	const { user } = useAuth()
 	const { profile } = useProfile()
 	return (
-		<Layout>
+		<>
 			{!user ? (
 				<Heading fontSize={'30px'}>
 					Please register or log in to your account
@@ -23,6 +22,6 @@ export default function Favorites({}: IFavorites) {
 					title={'Favorites'}
 				></Catalog>
 			)}
-		</Layout>
+		</>
 	)
 }

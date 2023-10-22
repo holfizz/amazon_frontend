@@ -2,7 +2,6 @@ import { CategoryService } from '@/services/category.service'
 import { IPageSlugParam, TypeParamSlug } from '@/interfaces/page-params'
 import { ProductService } from '@/services/product/product.service'
 import Catalog from '@/ui/catalog/Catalog'
-import Layout from '@/ui/Layout/Layout'
 import type { Metadata } from 'next'
 
 export const revalidate = 60
@@ -44,11 +43,11 @@ export async function generateMetadata({
 export default async function CategoryPage({ params }: IPageSlugParam) {
 	const data = await getProducts(params)
 	return (
-		<Layout>
+		<>
 			<Catalog
 				products={data.products || []}
 				title={data.category.name}
 			></Catalog>
-		</Layout>
+		</>
 	)
 }
