@@ -1,7 +1,8 @@
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { useEffect } from 'react'
+
 import { useActions } from '@/hooks/useActions'
 import { useTypedSelector } from '@/hooks/useTypedSelector'
-import { useEffect } from 'react'
 import { ProductDataFilters } from '@/interfaces/product.interface'
 
 export const useFilters = () => {
@@ -13,6 +14,7 @@ export const useFilters = () => {
 	const { queryParams, isFilterUpdated } = useTypedSelector(
 		state => state.filters,
 	)
+
 	useEffect(() => {
 		searchParams.forEach((value, key) => {
 			updateQueryParam({
@@ -21,4 +23,23 @@ export const useFilters = () => {
 			})
 		})
 	}, [])
+
+	const updateQueryParams = (key: keyof ProductDataFilters, value: string) => {
+		const newParams = new URLSearchParams(searchParams.toString())
+
+		if (value) {
+			newParams.set(key, String(value))
+		} else {
+			newParams.delete(key)
+		}
+
+		replace(pathname + `?${newParams.toString().replace(/%7C/g, '|')}`)
+		updateQueryParam({ key, value })
+	}
+
+	return {
+		updateQueryParams,
+		queryParams,
+		isFilterUpdated,
+	}
 }

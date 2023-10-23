@@ -2,7 +2,7 @@ import { ProductDataFilters } from '@/interfaces/product.interface'
 
 export interface IFiltersState {
 	isFilterUpdated: boolean
-	queryParams: ProductDataFilters
+	queryParams: ProductDataFilters | never
 }
 
 export interface IFiltersActionsPayload {

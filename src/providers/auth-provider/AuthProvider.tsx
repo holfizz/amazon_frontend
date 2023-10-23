@@ -7,6 +7,7 @@ import { usePathname, useRouter } from 'next/navigation'
 import { ProtectedRoutes } from '@/providers/auth-provider/protected-routes'
 import { ADMIN_PANEL_URL } from '@/config/url.config'
 import NotFound from '@//app/not-found'
+import Auth from '@/app/auth/Auth'
 
 const AuthProvider: FC<PropsWithChildren<unknown>> = ({ children }) => {
 	const { user } = useAuth()
@@ -36,8 +37,8 @@ const AuthProvider: FC<PropsWithChildren<unknown>> = ({ children }) => {
 	if (user && isProtectedRoute) return <>{children}</>
 	if (user && isAdminRoute) return <NotFound />
 
-	pathname !== '/auth' && router.replace('/auth')
-	return null
+	// pathname !== '/auth' && router.replace('/auth')
+	if (pathname !== '/auth') return <Auth />
 }
 
 export default AuthProvider

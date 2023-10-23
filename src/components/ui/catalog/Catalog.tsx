@@ -20,9 +20,10 @@ const Catalog: FC<ICatalog> = ({ products, title, isLoading }) => {
 			<div className={cls.catalog}>
 				{products.length ? (
 					<>
-						{products.map(products => (
-							<ProductItem key={products.id} product={products} />
-						))}
+						{products.map(products => {
+							console.log(products)
+							return <ProductItem key={products.id} product={products} />
+						})}
 					</>
 				) : (
 					<Heading fontSize={'30px'}>There are no product</Heading>

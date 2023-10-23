@@ -1,5 +1,5 @@
 .sortDropDown {
-	width: 100px;
+	width: 200px;
 	height: 40px;
   cursor: pointer;
 	display: flex;
@@ -12,12 +12,4 @@
 		color: #fff;
       cursor: pointer;
 	}
-}
-.light {
-	background: var(--primary);
-	border-radius: 5px;
-}
-.dark {
-	background: var(--dark-blue);
-	border: 2px solid var(--grey);
 }

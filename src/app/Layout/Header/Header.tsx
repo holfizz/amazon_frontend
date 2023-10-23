@@ -19,7 +19,9 @@ const Header = () => {
 		<header className={cls.header}>
 			<Link href={'/'} className={cls.headerBlockLogo}>
 				{isAdminPanel ? (
-					<Heading fontSize={'30px'}>ADMIN PANEL</Heading>
+					<Heading className={cls.adminPanel_heading} fontSize={'30px'}>
+						ADMIN PANEL
+					</Heading>
 				) : (
 					<Image width={150} alt={'logo_amazon'} src={Logo} />
 				)}

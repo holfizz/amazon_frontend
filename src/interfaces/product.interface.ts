@@ -23,7 +23,7 @@ export interface ProductDataFilters {
 	sort?: EnumProductSort | string
 	searchTerm?: string
 	page?: number
-	perPage?: number
+	perPage: number
 	ratings?: string
 	minPrice?: string
 	maxPrice?: string
@@ -49,6 +49,6 @@ export enum EnumProductSort {
 	HIGH_PRICE = 'high_price',
 	LOW_PRICE = 'low_price',
 }
-export interface TypeParamFilters {
-	searchTerm: ProductDataFilters
+export interface TypeParamsFilters {
+	searchParams: ProductDataFilters
 }

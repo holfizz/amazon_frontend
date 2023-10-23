@@ -7,14 +7,18 @@ import Link from 'next/link'
 import Cart from '@/app/Layout/Header/cart/Cart'
 import HeaderProfile from '@/app/Layout/Header/headerProfile/HeaderProfile'
 import { MdOutlineAdminPanelSettings } from 'react-icons/md'
+import { useAuth } from '@/hooks/useAuth'
+import { useIsAdminPanel } from '@/hooks/useIsAdminPanel'
 
-const ControlPanel: FC<{ isAdmin?: boolean }> = ({ isAdmin }) => {
+const ControlPanel: FC = () => {
+	const { user } = useAuth()
+	const { isAdminPanel } = useIsAdminPanel()
 	return (
 		<div className={cls.controlPanel}>
-			{isAdmin && (
-				<div className={cls.adminIcon}>
+			{user?.isAdmin && !isAdminPanel && (
+				<Link href={'/admin'} className={cls.adminIcon}>
 					<MdOutlineAdminPanelSettings />
-				</div>
+				</Link>
 			)}
 			<Link href={'/favorites'} className={cls.favorites}>
 				<AiOutlineHeart />

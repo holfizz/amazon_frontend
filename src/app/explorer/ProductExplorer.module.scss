@@ -1,0 +1,29 @@
+.explorer {
+	display: flex;
+	> aside {
+		width: 0;
+		white-space: nowrap;
+		opacity: 0;
+		transition:
+			width 600ms ease-in,
+			opacity 600ms ease-in;
+	}
+
+	> section {
+		width: 100%;
+		transition: width 600ms ease-in;
+	}
+
+	&.filterOpened {
+		gap: 5px;
+
+		> aside {
+			width: 250px;
+			opacity: 100;
+		}
+	}
+}
+
+.buttonBlock {
+	width: 250px;
+}

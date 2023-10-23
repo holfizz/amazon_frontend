@@ -1,23 +1,20 @@
 'use client'
 
-import { FC } from 'react'
-import CatalogPagination from '@/ui/catalog/CatalogPagination'
+import React, { FC } from 'react'
 import { TypePaginationProducts } from '@/interfaces/product.interface'
 import { useAuth } from '@/hooks/useAuth'
 import { useActions } from '@/hooks/useActions'
 import Carousel from '@/ui/carousel/Carousel'
 import { carouselItems } from '@/app/carousel.data'
+import Catalog from '@/ui/catalog/Catalog'
 
-const Home: FC<TypePaginationProducts> = ({ products, length }) => {
+const Home: FC<TypePaginationProducts> = ({ products }) => {
 	const { user } = useAuth()
 	const { logout } = useActions()
 	return (
 		<>
 			<Carousel items={carouselItems} />
-			<CatalogPagination
-				data={{ products, length }}
-				title={'Hot deals 🔥'}
-			></CatalogPagination>
+			<Catalog title='Freshed products' products={products} />
 		</>
 	)
 }

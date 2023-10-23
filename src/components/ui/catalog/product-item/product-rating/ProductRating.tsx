@@ -14,7 +14,6 @@ const ProductRating: FC<IProductRating> = ({ product, isText = false }) => {
 				product.reviews.length,
 		) || 0,
 	)
-
 	return (
 		<div>
 			{!!product.reviews.length && (

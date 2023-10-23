@@ -1,6 +1,6 @@
 :root {
 	--black: #2e3239;
-	--light-grey: rgba(171, 169, 169, 0.91);
+	--light-grey:#ABA9A9FF;
 	--grey: #3e4852;
 	--white: #fff;
 	--primary: #ff8902;
@@ -24,8 +24,11 @@ html {
 	border: none;
 	box-shadow: none;
 	background: transparent;
-
 	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+
 }
 button {
 	cursor: pointer;
