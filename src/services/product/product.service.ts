@@ -23,7 +23,7 @@ export const ProductService = {
 		})
 	},
 	async getBySlug(slug: string) {
-		const { data } = await axiosClassic<IProduct[]>({
+		const { data } = await axiosClassic<IProduct>({
 			url: `${pathApiConstants.PRODUCTS}/by-slug/${slug}`,
 			method: 'GET',
 		})

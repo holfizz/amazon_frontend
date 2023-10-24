@@ -1,0 +1,50 @@
+// ProductInformation.module.scss
+
+.productContainer {
+  background: white;
+  border-radius: .25rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+  padding: 1.5rem;
+  position: relative;
+  max-height: max-content;
+}
+
+.priceText {
+  font-size: 1.875rem;
+  font-weight: 600;
+}
+
+.shippingInfo {
+  margin-top: .5rem;
+}
+
+.linkText {
+  color: #38b2ac;
+  font-weight: 600;
+  margin-left: .5rem;
+}
+
+.deliveryInfo, .secureTransaction {
+  margin-top: 1rem;
+  font-size: .875rem;
+}
+
+.hintText {
+  opacity: .5;
+  margin-top: .25rem;
+  font-size: .875rem;
+  display: block;
+}
+
+.secureTransaction {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  opacity: .4;
+}
+
+.favoriteButton {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+}

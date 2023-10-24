@@ -17,15 +17,17 @@ const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 					<AddToCartButton product={product} />
 				</div>
 
-				<Image
-					src={product.images[0]}
-					alt={product.name}
-					width={250}
-					height={250}
-				/>
+				<Link href={`product/${product.slug}`}>
+					<Image
+						src={product.images[0]}
+						alt={product.name}
+						width={250}
+						height={250}
+					/>
+				</Link>
 			</div>
 			<div className={cls.productInf}>
-				<Link className={cls.productCartName} href={`/product/${product.slug}`}>
+				<Link className={cls.productCartName} href={`product/${product.slug}`}>
 					{product.name}
 				</Link>
 				<Link

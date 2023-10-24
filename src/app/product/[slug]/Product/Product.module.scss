@@ -1,0 +1,26 @@
+.product-page {
+  .product-heading {
+    margin-bottom: 0.25rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-gap: 3rem;
+    margin-top: 1.5rem;
+
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product-description {
+    opacity: 0.8;
+
+    .description-title {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .description-content {
+      font-weight: 300;
+    }
+  }
+}
