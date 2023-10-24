@@ -30,23 +30,24 @@ const Sidebar = () => {
 					<div className={cls.categoryItemsBlock}>
 						<ul className={cls.categoryItemsUl}>
 							{(isAdminPanel ? ADMIN_MANU : convertToMenuItems(data))?.map(
-								item => (
-									<li
-										className={[
-											cls.categoryItem,
-											asPath === `/category/${item.href}` &&
-												cls.categoryItemActive,
-										].join(' ')}
-										key={item.href}
-									>
-										{asPath === `/${item.href}` && (
-											<div className={cls.activeElementLabel}></div>
-										)}
-										<div className={cls.inactiveElement}>
-											<Link href={`${item.href}`}>{item.label}</Link>
-										</div>
-									</li>
-								),
+								item => {
+									return (
+										<li
+											className={[
+												cls.categoryItem,
+												asPath === `${item.href}` && cls.categoryItemActive,
+											].join(' ')}
+											key={item.href}
+										>
+											{asPath === `${item.href}` && (
+												<div className={cls.activeElementLabel}></div>
+											)}
+											<div className={cls.inactiveElement}>
+												<Link href={`${item.href}`}>{item.label}</Link>
+											</div>
+										</li>
+									)
+								},
 							)}
 						</ul>
 					</div>
