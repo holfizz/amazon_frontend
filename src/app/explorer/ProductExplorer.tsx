@@ -20,7 +20,6 @@ const ProductExplorer: FC<IProductExplorer> = ({ initialProducts }) => {
 	const [isFilterOpen, setIsFilterOpen] = useState<boolean>()
 
 	const { isFilterUpdated, queryParams, updateQueryParams } = useFilters()
-	console.log(queryParams.ratings)
 	const { data, isFetching } = useQuery(
 		['product explorer', queryParams],
 		() => ProductService.getAll(queryParams),

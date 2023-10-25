@@ -12,12 +12,17 @@ export const metadata: Metadata = {
 	...NO_INDEX_PAGE,
 }
 
+export const revalidate = 60
+
 async function getProducts(searchParams: ProductDataFilters) {
 	const data = await ProductService.getAll(searchParams)
 	return data
 }
 
-export default async function Page({ searchParams }: TypeParamsFilters) {
+export default async function ExplorerPage({
+	searchParams,
+}: TypeParamsFilters) {
 	const data = await getProducts(searchParams)
+
 	return <ProductExplorer initialProducts={data} />
 }

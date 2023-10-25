@@ -1,9 +1,12 @@
 .checkout {
+  display: grid;
   grid-gap: 20px;
   grid-template-columns: 2fr 1.2fr;
 
   .list {
     .item {
+      position: relative;
+      margin: 10px 0;
       margin-bottom: 4px;
       display: flex;
       align-items: center;
@@ -57,6 +60,9 @@
         font-weight: 600;
       }
     }
+    button{
+      width: 200px;
+    }
   }
 
   .recommended {
@@ -64,4 +70,17 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
   }
+}
+
+.removeFromCart{
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
 }

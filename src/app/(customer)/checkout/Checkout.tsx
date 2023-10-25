@@ -59,8 +59,9 @@ const Checkout: FC<{ products: IProduct[] }> = ({ products = [] }) => {
 								<div>Total Cost</div>
 								<div>{convertPrice(total)}</div>
 							</div>
+
 							<Button
-								variant='white'
+								variant='light'
 								className='mt-5 mb-2'
 								onClick={() => mutate()}
 							>
