@@ -6,6 +6,6 @@ export const convertToMenuItems = (
 ): IMenuItem[] | undefined => {
 	return categories?.map(category => ({
 		label: category.name,
-		href: `/${category.slug}`,
+		href: `/category/${category.slug}`,
 	}))
 }

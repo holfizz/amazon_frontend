@@ -16,6 +16,11 @@ const nextConfig = {
 				hostname: 'avatars.githubusercontent.com',
 				port: '',
 			},
+			{
+				protocol: 'https',
+				hostname: 'cloudflare-ipfs.com',
+				port: '',
+			},
 		],
 	},
 	async rewrites() {

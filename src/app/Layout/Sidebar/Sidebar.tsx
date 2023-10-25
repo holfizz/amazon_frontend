@@ -35,15 +35,15 @@ const Sidebar = () => {
 										<li
 											className={[
 												cls.categoryItem,
-												asPath === `${item.href}` && cls.categoryItemActive,
+												asPath == item.href && cls.categoryItemActive,
 											].join(' ')}
 											key={item.href}
 										>
-											{asPath === `${item.href}` && (
+											{asPath === item.href && (
 												<div className={cls.activeElementLabel}></div>
 											)}
 											<div className={cls.inactiveElement}>
-												<Link href={`${item.href}`}>{item.label}</Link>
+												<Link href={item.href}>{item.label}</Link>
 											</div>
 										</li>
 									)

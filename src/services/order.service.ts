@@ -9,4 +9,7 @@ export const OrderService = {
 			method: 'GET',
 		})
 	},
+	place(param: {items: {quantity: number; productId: number; price: number}[]}) {
+		return Promise.resolve({})
+	},
 }

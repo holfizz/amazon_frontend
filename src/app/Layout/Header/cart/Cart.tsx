@@ -44,11 +44,9 @@ const Cart: FC = () => {
 					</div>
 					{!!items.length && (
 						<div className={cls.cartTitle}>
-							<Button variant={'light'}>
-								<Link href='/checkout' onClick={() => setIsShow(false)}>
-									Go to checkout
-								</Link>
-							</Button>
+							<Link href='/checkout' onClick={() => setIsShow(false)}>
+								<Button variant={'light'}>Go to checkout</Button>
+							</Link>
 						</div>
 					)}
 				</div>

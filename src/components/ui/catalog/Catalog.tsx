@@ -21,7 +21,6 @@ const Catalog: FC<ICatalog> = ({ products, title, isLoading }) => {
 				{products.length ? (
 					<>
 						{products.map(products => {
-							console.log(products)
 							return <ProductItem key={products.id} product={products} />
 						})}
 					</>

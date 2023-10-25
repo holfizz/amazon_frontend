@@ -1,0 +1,67 @@
+.checkout {
+  grid-gap: 20px;
+  grid-template-columns: 2fr 1.2fr;
+
+  .list {
+    .item {
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      border-radius: 8px;
+      background-color: #ffffff;
+      padding: 6px 10px;
+      padding-right: 40px;
+
+      .row {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        .information {
+          margin-left: 6px;
+
+          > div:first-child {
+            font-size: 16px;
+            font-weight: 600;
+          }
+
+          > div:last-child {
+            font-size: 12px;
+            opacity: 0.4;
+          }
+        }
+
+        .price {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+
+    .total {
+      > div:first-child {
+        font-size: 12px;
+        opacity: 0.4;
+      }
+
+      > div:last-child {
+        font-size: 24px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .recommended {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+}

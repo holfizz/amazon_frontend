@@ -17,7 +17,7 @@ const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 					<AddToCartButton product={product} />
 				</div>
 
-				<Link href={`product/${product.slug}`}>
+				<Link href={`/product/${product.slug}`}>
 					<Image
 						src={product.images[0]}
 						alt={product.name}
@@ -27,7 +27,7 @@ const ProductItem: FC<{ product: IProduct }> = ({ product }) => {
 				</Link>
 			</div>
 			<div className={cls.productInf}>
-				<Link className={cls.productCartName} href={`product/${product.slug}`}>
+				<Link className={cls.productCartName} href={`/product/${product.slug}`}>
 					{product.name}
 				</Link>
 				<Link

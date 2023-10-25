@@ -11,7 +11,7 @@ import Heading from '@/ui/heading/Heading'
 import SimilarProducts from '@/app/product/[slug]/SimilarProduct/SimilarProduct'
 import ProductReviewsCount from '@/app/product/[slug]/ProductReviewsCount'
 import ProductInformation from '@/app/product/[slug]/product-information/ProductInformation'
-import { useEffect } from 'react'
+import ProductReviews from '@/app/product/[slug]/product-reviews/ProductReviews'
 
 interface IProductPage {
 	initialProduct: IProduct
@@ -32,9 +32,6 @@ export default function Product({
 			enabled: !!slug,
 		},
 	)
-	useEffect(() => {
-		console.log(similarProducts)
-	}, [])
 	return (
 		<div className={styles['product-page']}>
 			<Heading fontSize={'24px'} className={styles['product-heading']}>
@@ -52,6 +49,7 @@ export default function Product({
 				<ProductInformation product={product} />
 			</div>
 			<SimilarProducts similarProducts={similarProducts} />
+			<ProductReviews reviews={product.reviews} productId={product.id} />
 		</div>
 	)
 }

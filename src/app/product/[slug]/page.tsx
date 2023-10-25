@@ -9,18 +9,18 @@ export const revalidate = 60
 export async function generateStaticParams() {
 	const response = await ProductService.getAll()
 
-	const paths = response.products.map(product => ({
-		slug: product.slug,
-	}))
-	console.log(paths)
+	const paths = response.products.map(product => {
+		return {
+			params: { slug: product.slug },
+		}
+	})
+
 	return paths
 }
 
 async function getProduct(params: TypeParamSlug) {
-	const product = await ProductService.getBySlug(params?.slug as string)
-	console.log(product)
-
-	const { data: similarProducts } = await ProductService.getSimilar(9)
+	const product = await ProductService.getBySlug(params.slug as string)
+	const { data: similarProducts } = await ProductService.getSimilar(product.id)
 
 	return {
 		product,
@@ -46,12 +46,11 @@ export async function generateMetadata({
 
 export default async function ProductPage({ params }: IPageSlugParam) {
 	const { product, similarProducts } = await getProduct(params)
-
 	return (
 		<Product
 			initialProduct={product}
+			slug={product.slug}
 			similarProducts={similarProducts}
-			slug={params.slug}
 		/>
 	)
 }
