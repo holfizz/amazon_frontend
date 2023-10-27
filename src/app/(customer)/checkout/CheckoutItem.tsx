@@ -4,11 +4,8 @@ import { FC } from 'react'
 import styles from './Checkout.module.scss'
 import { IProduct } from '@/interfaces/product.interface'
 import { convertPrice } from '@/utlis/convertPrice'
-import { FiTrash } from 'react-icons/fi'
-import { useActions } from '@/hooks/useActions'
 
 const CheckoutItem: FC<{ product: IProduct }> = ({ product }) => {
-	const { removeFromCart } = useActions()
 	return (
 		<div className={styles.item}>
 			<Image
@@ -23,14 +20,6 @@ const CheckoutItem: FC<{ product: IProduct }> = ({ product }) => {
 					<div>{product.category.name}</div>
 				</div>
 				<div className={styles.price}>{convertPrice(product.price)}</div>
-			</div>
-			<div
-				onClick={() => {
-					removeFromCart({ id: product.id })
-				}}
-				className={styles.removeFromCart}
-			>
-				<FiTrash />
 			</div>
 		</div>
 	)

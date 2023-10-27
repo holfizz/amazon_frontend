@@ -1,4 +1,10 @@
+.sidebarBlock{
+	width: 330px;
+	position: inherit;
+}
 .sidebar {
+	width: 320px;
+	position: fixed;
 	background: var(--secondary);
 	height: calc(100vh - 100px);
 	border-right: 3px solid var(--grey);

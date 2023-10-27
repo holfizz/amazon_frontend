@@ -7,11 +7,11 @@ import { RiShoppingCartLine } from 'react-icons/ri'
 import SquareButton from '@/ui/button/SquareButton'
 
 import cls from './Cart.module.scss'
-import CartItem from './cart-item/CartItem'
 import { useOutside } from '@/hooks/useOutside'
 import { useCart } from '@/hooks/useCart'
 import { convertPrice } from '@/utlis/convertPrice'
 import Button from '@/ui/button/Button'
+import CartItem from './cart-item/CartItem'
 
 const Cart: FC = () => {
 	const { isShow, setIsShow, ref } = useOutside(false)

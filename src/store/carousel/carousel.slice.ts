@@ -15,7 +15,8 @@ export const carouselSlice = createSlice({
 			else state.selectedItemIndex = 0
 		},
 		prevSlide: state => {
-			if (state.selectedItemIndex > 0) state.selectedItemIndex -= 1
+			if (state.selectedItemIndex === 0) state.selectedItemIndex = 1
+			else if (state.selectedItemIndex === 1) state.selectedItemIndex = 0
 		},
 		selectSlide: (state, action: PayloadAction<number>) => {
 			state.selectedItemIndex = action.payload

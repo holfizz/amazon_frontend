@@ -1,4 +1,4 @@
-import { IMenuItem } from '@/app/Layout/Sidebar/menu.interdace'
+import { IMenuItem } from '@/app/layout/Sidebar/menu.interdace'
 import { getAdminUrl } from '@/config/url.config'
 
 export const ADMIN_MANU: IMenuItem[] = [

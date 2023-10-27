@@ -1,5 +1,5 @@
 import { ICategory } from '@/interfaces/category.interface'
-import { IMenuItem } from '@/app/Layout/Sidebar/menu.interdace'
+import { IMenuItem } from '@/app/layout/Sidebar/menu.interdace'
 
 export const convertToMenuItems = (
 	categories: ICategory[] | undefined,

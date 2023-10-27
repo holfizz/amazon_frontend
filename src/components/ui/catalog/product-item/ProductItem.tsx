@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { IProduct } from '@/interfaces/product.interface'
 import Image from 'next/image'
 import ProductRating from '@/ui/catalog/product-item/product-rating/ProductRating'

@@ -1,5 +1,5 @@
 .Auth {
-	height: 100%;
+	height: calc(100vh - 100px);
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -12,19 +12,16 @@
 	align-items: center;
 	justify-content: space-between;
 	background: #fff;
-	border-radius: 30px;
 	border-radius: 15px;
 	overflow: hidden;
 }
 .form {
 	flex-direction: column;
-	width: auto;
 	height: 100%;
 	padding: 30px;
 	width: 50%;
 	background: #fff;
 	display: flex;
-	flex-direction: column;
 	justify-content: space-around;
 }
 

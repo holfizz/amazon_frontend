@@ -11,20 +11,20 @@ import Link from 'next/link'
 const HeaderProfile = () => {
 	const { profile } = useProfile()
 	const { user } = useAuth()
-	if (!profile?.avatarPath) return null
 	return (
 		<div>
-			{user ? (
+			{!!user && (
 				<div className={cls.profileBlock}>
 					<Image
 						className={cls.imageProfile}
 						width={43}
 						height={43}
-						src={profile?.avatarPath}
-						alt={profile?.name}
+						src={profile?.avatarPath as string}
+						alt={profile?.name as string}
 					/>
 				</div>
-			) : (
+			)}
+			{!user && (
 				<div className={cls.singIn}>
 					<Link href={'/auth'}>
 						Sign In <PiSignInBold />
