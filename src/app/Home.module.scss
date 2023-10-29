@@ -18,3 +18,8 @@
   color: var(--primary);
   transition: all .4s
 }
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}

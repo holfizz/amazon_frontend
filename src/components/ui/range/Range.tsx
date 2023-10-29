@@ -27,7 +27,7 @@ const Range: FC<IRange> = ({
 
 	useEffect(() => {
 		onChangeFromValue(debouncedFromValue)
-	}, [debouncedFromValue])
+	}, [fromValue])
 
 	useEffect(() => {
 		onChangeToValue(debouncedToValue)

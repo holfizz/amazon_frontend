@@ -1,8 +1,9 @@
 .carousel{
   position: relative;
-  width: 100%;
+  width: auto;
   height: 300px;
-  top: 150px;
+  top: 170px;
+  left: 0;
   margin-bottom: 200px;
 }
 .item {
@@ -10,7 +11,7 @@
   display: flex;
   align-items: center;
   height: 300px;
-  width: 100%;
+  width:calc( 100% - 10px);
   border-radius: 20px;
   background:var(--secondary)  ;
   background-repeat: no-repeat;
